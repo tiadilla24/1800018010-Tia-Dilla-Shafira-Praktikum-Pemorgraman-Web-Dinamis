@@ -1,5 +1,12 @@
 <?php
-session_start();
-session_destroy();
-echo "Anda telah sukses keluar sistem <b>LOGOUT</b>";
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "akademik";
+$koneksi = mysqli_connect($host, $username, $password, $database);
+
+if (!$koneksi) {
+    echo "Error :" . mysqli_connect_error();
+    exit();
+}
 ?>
